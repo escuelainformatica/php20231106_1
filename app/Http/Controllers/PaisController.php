@@ -33,6 +33,7 @@ class PaisController extends Controller
 
         $paises=Pais::where('nombre','like','%'.$filtrar.'%')
             ->paginate($perPage = 10, $columns = ['*'], $pageName = 'paises');
+                    
         return view("pais.listar",[
             'filtrar'=>$filtrar,
             'paises'=>$paises,

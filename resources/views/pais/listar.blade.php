@@ -1,3 +1,5 @@
+@extends("ejemplo")
+@section("contenido")
 <form>
     <input type='text' name='filtrar' value="{{$filtrar}}"/><button name='boton' value='filtrar'>Filtar</button>
 </form>
@@ -19,3 +21,4 @@
     <a href='/?paises={{$pagina+1}}&filtrar={{$filtrar}}'>></a>
     @endif
 </div>
+@endsection

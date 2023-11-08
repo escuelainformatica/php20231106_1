@@ -3,6 +3,12 @@
 use App\Http\Controllers\PaisController;
 use Illuminate\Support\Facades\Route;
 
+function links() {
+    return ['link1','link2'];
+}
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[PaisController::class,'index'])->name('pais.listar');
 Route::get('/insertar',[PaisController::class,'create'])->name('pais.insertar');
 Route::post('/insertar',[PaisController::class,'store'])->name('pais.insertar2');
+Route::get('/listar',function(){
+    return view('ejemplo');
+});
